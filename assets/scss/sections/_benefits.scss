@@ -1,0 +1,73 @@
+.benefits {
+    &__content {
+        max-width: 1180px;
+        margin: 0 auto var(--content-margin);
+        display: flex;
+        align-items: stretch;
+        gap: 20px;
+        justify-content: space-between;
+
+        &-col {
+            &.content--left {
+                text-align: right;
+
+                .benefits__content-card {
+                    align-items: flex-end;
+                }
+            }
+            &.content--right {
+                text-align: left;
+
+                .benefits__content-card {
+                    align-items: flex-start;
+                }
+            }
+
+            &.content--thumbnail {
+                max-width: 400px;
+                border-radius: 16px;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        &-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            max-width: 294px;
+        }
+
+        &-card {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            img {
+                display: flex;
+                flex-shrink: 0;
+                width: 40px;
+                height: 40px;
+            }
+
+            h3,
+            p {
+                margin: 0;
+            }
+
+            h3 {
+                font: 700 32px / 120% var(--ff-base);
+                text-transform: capitalize;
+            }
+
+            p {
+                font: 300 18px / 150% var(--ff-base);
+                color: var(--text-grey);
+            }
+        }
+    }
+}

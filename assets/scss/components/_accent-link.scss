@@ -1,0 +1,19 @@
+@use '../base/mixins' as *;
+
+.link--accent {
+    font: 400 18px / 130% var(--ff-base);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    padding: 14.5px;
+    max-width: 204px;
+    margin: 0 auto;
+    border: 1.5px solid var(--accent-color);
+    color: var(--accent-color);
+    @include transitions(0.2s);
+    @include hover {
+        color: var(--link-text-hover);
+        background: var(--link-bg-hover);
+    }
+}

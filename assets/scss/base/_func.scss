@@ -1,0 +1,14 @@
+@function display-type($is-flex) {
+    @if $is-flex {
+        @return flex;
+    } @else {
+        @return inline-flex;
+    }
+}
+//example
+// .container {
+//     display: display-type(true); //flex
+// }
+// .container {
+//     display: display-type(false); //inline-flex
+// }

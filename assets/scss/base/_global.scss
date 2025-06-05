@@ -1,0 +1,44 @@
+@use 'mixins' as *;
+@use 'func' as *;
+@use 'media' as *;
+@use 'var' as *;
+
+html,
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font: 400 16px/1.5 var(--ff-base);
+    color: var(--text-color_base);
+    background: var(--bgc_base);
+}
+
+main {
+    flex: 1;
+}
+
+button {
+    @include reset_button;
+    display: flex;
+}
+
+a {
+    @include reset_link;
+}
+
+section {
+    margin-bottom: var(--section-margin);
+}
+
+.container {
+    max-width: 1348px;
+    padding-inline: 50px;
+    margin: 0 auto;
+
+    @include media('mobile') {
+        padding-inline: 20px;
+    }
+}

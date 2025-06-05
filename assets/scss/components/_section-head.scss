@@ -1,0 +1,23 @@
+.section-header {
+    max-width: 855px;
+    margin: 0 auto 152px;
+    text-align: center;
+
+    &__subtitle {
+        font: 700 12px / 130% var(--ff-base);
+        margin-bottom: 8px;
+        letter-spacing: 5%;
+        text-transform: uppercase;
+        color: var(--accent-color);
+    }
+
+    &__title {
+        font: 700 72px / 100% var(--ff-base);
+        margin-bottom: 16px;
+    }
+
+    &__description {
+        font: 300 18px / 100% var(--ff-base);
+        color: var(--text-grey);
+    }
+}

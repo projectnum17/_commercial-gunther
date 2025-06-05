@@ -1,0 +1,111 @@
+.points {
+    counter-reset: item-counter;
+
+    .section-header {
+        margin-bottom: 373px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: stretch;
+        position: relative;
+        counter-increment: item-counter;
+
+        &::before {
+            font: 700 150px / 100% var(--ff-base);
+            content: counter(item-counter, decimal-leading-zero);
+            text-transform: uppercase;
+            position: absolute;
+            top: -30px;
+            transform: translateY(-100%);
+            z-index: 2;
+        }
+
+        &-deco {
+            width: 236px;
+            height: 241px;
+            display: flex;
+            position: absolute;
+            top: 20px;
+            transform: translateY(-100%);
+
+            &-bg {
+                margin-left: auto;
+                width: 82.4%;
+                height: 100%;
+                background: var(--accent-color);
+            }
+        }
+
+        &:not(:last-of-type) {
+            margin-bottom: 373px;
+        }
+
+        &:last-of-type {
+            margin-bottom: var(--content-margin);
+        }
+
+        &-thumb {
+            max-width: 718px;
+            width: 57.5%;
+            border-radius: 0 16px 16px 0;
+            overflow: hidden;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &-info {
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+            width: 42.5%;
+            padding: 56px 40px;
+            border-radius: 16px 0 0 16px;
+            backdrop-filter: blur(35px);
+            background: #a7a7a71a;
+        }
+
+        &-box {
+            padding-inline: 24px;
+        }
+
+        &-title {
+            font: 700 48px / 120% var(--ff-base);
+            text-transform: capitalize;
+            margin-bottom: 16px;
+        }
+
+        &-description {
+            font: 300 18px / 150% var(--ff-base);
+            color: var(--text-grey);
+        }
+
+        &-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        &-el {
+            font: 300 18px / 150% var(--ff-base);
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            color: var(--text-grey);
+
+            &::before {
+                content: '';
+                width: 24px;
+                height: 26px;
+                display: inline-flex;
+                flex-shrink: 0;
+                background: url('../images/icons/ico-check.svg') no-repeat
+                    center center / cover;
+            }
+        }
+    }
+}

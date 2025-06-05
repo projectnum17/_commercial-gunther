@@ -1,0 +1,102 @@
+.menu {
+    &__content {
+        margin-bottom: var(--content-margin);
+
+        &-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        &-card {
+            border-radius: 16px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            background: var(--bg-grey);
+
+            .row {
+                &:last-child {
+                    margin-top: auto;
+                }
+            }
+
+            .thumbnail {
+                height: 352px;
+                margin-bottom: 48px;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .wrapper {
+                padding-inline: 24px;
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+
+                &:last-child {
+                    margin-bottom: 48px;
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: 16px;
+                }
+
+                &__ico {
+                    width: 40px;
+                    height: 40px;
+                    display: inline-flex;
+                    flex-shrink: 0;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                &__title {
+                    font: 700 32px / 120% var(--ff-base);
+                    text-transform: capitalize;
+                }
+
+                &__description {
+                    font: 300 18px / 150% var(--ff-base);
+                    color: var(--text-grey);
+                }
+            }
+
+            .info {
+                padding: 0px 24px 40px;
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+
+                &__item {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    justify-content: space-between;
+                    padding-inline: 16px;
+
+                    &:first-child {
+                        padding-top: 48px;
+                        border-top: 1px solid #89a3ab40;
+                    }
+                }
+
+                &__title {
+                    font: 300 18px / 150% var(--ff-base);
+                }
+
+                &__val {
+                    font: 700 24px / 100% var(--ff-base);
+                    color: var(--accent-color);
+                }
+            }
+        }
+    }
+}

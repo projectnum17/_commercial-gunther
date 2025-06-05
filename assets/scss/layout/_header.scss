@@ -1,0 +1,51 @@
+@use '../base/mixins' as *;
+@use '../base/var' as *;
+.header {
+    padding-block: 48px;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    &__logo {
+        max-width: 145px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__nav {
+        max-width: 419px;
+        width: 100%;
+    }
+
+    &__list {
+        justify-content: space-between;
+        @include flexCenter(10px);
+
+        &-link {
+            font: 400 18px / 130% var(--ff-base);
+            @include transitions(0.2s);
+            @include hover {
+                color: var(--accent-color);
+            }
+        }
+    }
+
+    &__link {
+        font: 400 18px / 130% var(--ff-base);
+        border-radius: 16px;
+        padding: 14.5px 38.5px;
+        border: 1.5px solid var(--accent-color);
+        color: var(--accent-color);
+        @include transitions(0.2s);
+        @include hover {
+            color: var(--link-text-hover);
+            background: var(--link-bg-hover);
+        }
+    }
+}
