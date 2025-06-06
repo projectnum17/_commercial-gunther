@@ -17,8 +17,10 @@ const video = () => {
 
     if (videoItem && videoPlay && videoPause) {
         videoItem.addEventListener('click', toggleVideo);
-        videoPlay.addEventListener('click', toggleVideo);
-        videoPause.addEventListener('click', toggleVideo);
+        videoItem.addEventListener('ended', () => {
+            videoPlay.classList.remove('hide');
+            videoPause.classList.remove('show');
+        });
     }
 };
 
