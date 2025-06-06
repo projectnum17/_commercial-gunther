@@ -39,6 +39,7 @@
             pointer-events: none;
             transition: all 0.2s linear;
             background: #f5f6fa;
+            color: inherit;
 
             @include media('tablet') {
                 width: 60px;
