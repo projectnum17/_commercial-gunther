@@ -1,0 +1,119 @@
+@use '../base/media' as *;
+
+.faq {
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+
+        @include media('tablet') {
+            gap: 24px;
+        }
+
+        @include media('mobile') {
+            gap: 16px;
+        }
+    }
+
+    &__item {
+        cursor: pointer;
+        padding-bottom: 48px;
+        border-bottom: 1px solid var(--text-color_base);
+
+        @include media('tablet') {
+            padding-bottom: 24px;
+        }
+
+        @include media('mobile') {
+            padding-bottom: 16px;
+        }
+
+        &.open {
+            .faq__item-inner {
+                padding-top: 24px;
+                grid-template-rows: 1fr;
+
+                @include media('mobile') {
+                    padding-top: 16px;
+                }
+            }
+
+            .faq__item-title {
+                &::before {
+                    background: url('../images/icons/ico-minus.svg') no-repeat
+                        center center;
+                }
+            }
+        }
+
+        &-inner {
+            display: grid;
+            grid-template-rows: 0fr;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.65, -0.1, 0.35, 1.5);
+        }
+
+        &-title {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font: 700 24px / 130% var(--ff-base);
+
+            @include media('tablet') {
+                font-size: 21px;
+            }
+
+            @include media('mobile') {
+                font-size: 18px;
+            }
+
+            &::before {
+                content: '';
+                display: inline-flex;
+                flex-shrink: 0;
+                width: 32px;
+                height: 32px;
+                background: url('../images/icons/ico-plus.svg') no-repeat center
+                    center;
+
+                @include media('mobile') {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+
+        &-description {
+            font: 300 18px / 150% var(--ff-base);
+            overflow: hidden;
+            color: var(--text-grey);
+
+            @include media('mobile') {
+                font-size: 16px;
+            }
+        }
+    }
+
+    &__links {
+        padding-top: 128px;
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        justify-content: center;
+
+        @include media('tablet') {
+            padding-top: 64px;
+        }
+
+        @include media('mobile') {
+            padding-top: 32px;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        a {
+            margin: 0;
+            width: 100%;
+        }
+    }
+}

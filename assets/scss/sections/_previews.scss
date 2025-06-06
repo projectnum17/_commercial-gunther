@@ -1,9 +1,34 @@
+@use '../base/media' as *;
 .previews {
     &__content {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 24px;
         margin-bottom: var(--content-margin);
+
+        @include media('mobile') {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 18px;
+        }
+
+        &-footnote {
+            border-radius: 16px;
+            width: max-content;
+            padding: 15px 22px;
+            backdrop-filter: blur(35px);
+            position: absolute;
+            border: 1px solid #f5f6fa;
+            background: #d4d4d41a;
+
+            @include media('desktop') {
+                display: none;
+            }
+
+            p {
+                font: 300 18px / 150% var(--ff-base);
+                color: #f5f6fa;
+            }
+        }
 
         &-col {
             position: relative;
@@ -14,6 +39,10 @@
             overflow: hidden;
             position: relative;
             height: 843px;
+
+            @include media('mobile') {
+                height: 450px;
+            }
             img {
                 object-fit: cover;
                 height: 100%;
@@ -44,6 +73,13 @@
             z-index: 2;
             color: #f5f6fa;
 
+            @include media('tablet') {
+                padding: 30px 20px;
+            }
+            @include media('mobile') {
+                padding: 20px;
+            }
+
             h3,
             p {
                 margin: 0;
@@ -53,10 +89,176 @@
                 font: 700 48px / 100% var(--ff-base);
                 text-transform: capitalize;
                 margin-bottom: 16px;
+                @include media('tablet') {
+                    font-size: 36px;
+                }
+                @include media('mobile') {
+                    font-size: 24px;
+                }
             }
 
             p {
                 font: 300 18px / 150% var(--ff-base);
+                @include media('tablet') {
+                    font-size: 16px;
+                }
+                @include media('mobile') {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .col--left {
+        .previews__content-footnote {
+            &.footnote--f {
+                top: 250px;
+                right: 122px;
+                max-width: 253px;
+
+                &::before {
+                    content: '';
+                    background: url('../images/icons/ico-pin.svg') no-repeat
+                        center center;
+                    width: 45px;
+                    height: 45px;
+                    position: absolute;
+                    right: 1px;
+                    top: 50%;
+                    transform: translate(100%, -50%);
+                    z-index: -1;
+                }
+            }
+            &.footnote--s {
+                top: 450px;
+                left: 62px;
+                max-width: 299px;
+
+                &::before {
+                    content: '';
+                    background: url('../images/icons/ico-pin.svg') no-repeat
+                        center center;
+                    width: 45px;
+                    height: 45px;
+                    position: absolute;
+                    left: 10px;
+                    top: 7px;
+                    transform: translate(-100%, -100%) rotate(180deg);
+                    z-index: -1;
+                }
+            }
+            &.footnote--t {
+                bottom: 150px;
+                right: 52px;
+                max-width: 229px;
+
+                &::before {
+                    content: '';
+                    background: url('../images/icons/ico-pin.svg') no-repeat
+                        center center;
+                    width: 45px;
+                    height: 45px;
+                    position: absolute;
+                    right: 40px;
+                    bottom: 5px;
+                    transform: translate(100%, 100%);
+                    z-index: -1;
+                }
+            }
+            &.footnote--for {
+                bottom: 80px;
+                left: 40px;
+                max-width: 267px;
+
+                &::before {
+                    content: '';
+                    background: url('../images/icons/ico-pin.svg') no-repeat
+                        center center;
+                    width: 45px;
+                    height: 45px;
+                    position: absolute;
+                    right: 40px;
+                    bottom: 5px;
+                    transform: translate(100%, 100%);
+                    z-index: -1;
+                }
+            }
+        }
+    }
+
+     .col--right {
+        .previews__content-footnote {
+            &.footnote--f {
+                top: 250px;
+                right: 122px;
+                max-width: 253px;
+
+                &::before {
+                    content: '';
+                    background: url('../images/icons/ico-pin.svg') no-repeat
+                        center center;
+                    width: 45px;
+                    height: 45px;
+                    position: absolute;
+                    right: 1px;
+                    top: 50%;
+                    transform: translate(100%, -50%);
+                    z-index: -1;
+                }
+            }
+            &.footnote--s {
+                top: 450px;
+                left: 62px;
+                max-width: 299px;
+
+                &::before {
+                    content: '';
+                    background: url('../images/icons/ico-pin.svg') no-repeat
+                        center center;
+                    width: 45px;
+                    height: 45px;
+                    position: absolute;
+                    left: 10px;
+                    top: 7px;
+                    transform: translate(-100%, -100%) rotate(180deg);
+                    z-index: -1;
+                }
+            }
+            &.footnote--t {
+                bottom: 150px;
+                right: 52px;
+                max-width: 229px;
+
+                &::before {
+                    content: '';
+                    background: url('../images/icons/ico-pin.svg') no-repeat
+                        center center;
+                    width: 45px;
+                    height: 45px;
+                    position: absolute;
+                    right: 40px;
+                    bottom: 5px;
+                    transform: translate(100%, 100%);
+                    z-index: -1;
+                }
+            }
+            &.footnote--for {
+                bottom: 80px;
+                left: 40px;
+                max-width: 267px;
+
+                &::before {
+                    content: '';
+                    background: url('../images/icons/ico-pin.svg') no-repeat
+                        center center;
+                    width: 45px;
+                    height: 45px;
+                    position: absolute;
+                    right: 40px;
+                    bottom: 5px;
+                    transform: translate(100%, 100%);
+                    z-index: -1;
+                }
             }
         }
     }

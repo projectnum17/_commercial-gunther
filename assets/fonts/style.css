@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Effra Trial';
+    src: local('Effra Trial Light'), url('Effra_Trial_Lt.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Effra Trial';
+    src: local('Effra Trial Regular'), url('Effra_Trial_Rg.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Effra Trial';
+    src: local('Effra Trial Italic'), url('Effra_Trial_It.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Effra Trial';
+    src: local('Effra Trial Bold'), url('Effra_Trial_Bd.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}

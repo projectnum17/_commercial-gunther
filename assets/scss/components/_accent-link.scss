@@ -1,6 +1,8 @@
 @use '../base/mixins' as *;
+@use '../base/media' as *;
 
-.link--accent {
+.link--accent,
+.link--secondary {
     font: 400 18px / 130% var(--ff-base);
     display: flex;
     align-items: center;
@@ -9,11 +11,29 @@
     padding: 14.5px;
     max-width: 204px;
     margin: 0 auto;
-    border: 1.5px solid var(--accent-color);
-    color: var(--accent-color);
+    border-style: solid;
+    border-width: 1.5px;
     @include transitions(0.2s);
+
+    @include media('mobile') {
+        max-width: 100%;
+    }
+}
+
+.link--accent {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
     @include hover {
         color: var(--link-text-hover);
         background: var(--link-bg-hover);
+    }
+}
+
+.link--secondary {
+    border-color: var(--secondary-link-color);
+    color: var(--secondary-link-color);
+    @include hover {
+        color: var(--link-text-hover);
+        background: var(--secondary-link-color);
     }
 }

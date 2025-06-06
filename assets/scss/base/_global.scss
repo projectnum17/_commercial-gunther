@@ -34,11 +34,11 @@ section {
 }
 
 .container {
-    max-width: 1348px;
-    padding-inline: 50px;
+    max-width: 1288px;
+    padding-inline: 20px;
     margin: 0 auto;
 
     @include media('mobile') {
-        padding-inline: 20px;
+        padding-inline: 11px;
     }
 }

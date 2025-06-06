@@ -1,7 +1,17 @@
+@use '../base/media' as *;
+
 .section-header {
     max-width: 855px;
     margin: 0 auto 152px;
     text-align: center;
+
+    @include media('tablet') {
+        margin: 0 auto 76px;
+    }
+
+    @include media('mobile') {
+        margin: 0 auto 38px;
+    }
 
     &__subtitle {
         font: 700 12px / 130% var(--ff-base);
@@ -13,11 +23,23 @@
 
     &__title {
         font: 700 72px / 100% var(--ff-base);
+        text-transform: capitalize;
         margin-bottom: 16px;
+
+        @include media('tablet') {
+            font-size: 48px;
+        }
+
+        @include media('mobile') {
+            font-size: 32px;
+        }
     }
 
     &__description {
         font: 300 18px / 100% var(--ff-base);
         color: var(--text-grey);
+        @include media('mobile') {
+            font-size: 16px;
+        }
     }
 }

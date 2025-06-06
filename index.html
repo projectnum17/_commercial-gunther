@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,8 +11,13 @@
         />
         <link
             rel="stylesheet"
+            href="https://unpkg.com/beerslider/dist/BeerSlider.css"
+        />
+        <link
+            rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
         />
+        <link rel="stylesheet" href="./assets/fonts/style.css" />
         <link rel="stylesheet" href="./assets/css/style.min.css" />
         <title>Title</title>
     </head>
@@ -60,7 +65,168 @@
         </header>
         <main class="main">
             <section class="hero">
-                <div class="container">HERO SECTION</div>
+                <div class="container">
+                    <div class="hero__content mobile--visible">
+                        <p>Für Hotellerie & Gastronomie</p>
+                        <h1>Glückliche Gäste. Erfolgreicher Gastgeber.</h1>
+                        <p>
+                            Strategischer Sparring-Partner für Hotellerie,
+                            Gastronomie, Catering & Gemeinschafts­verpflegung im
+                            DACH-Raum.
+                        </p>
+                    </div>
+                    <div class="hero__slider">
+                        <div
+                            id="heroSlider"
+                            class="hero__slider-before beer-slider"
+                            data-beer-label="before"
+                        >
+                            <div class="hero__slider-wrapper wrapper--right">
+                                <img
+                                    class="slider-thumb"
+                                    src="./assets/images/hero-after.jpg"
+                                    alt="Photo"
+                                />
+                                <div class="hero__slider-stats">
+                                    <div class="stats-box">
+                                        <span class="stats-box__val">
+                                            20+
+                                        </span>
+                                        <span class="stats-box__text">
+                                            Jahre Hotellerie & Gastronomie
+                                        </span>
+                                    </div>
+                                    <div class="stats-box">
+                                        <span class="stats-box__val">
+                                            170%
+                                        </span>
+                                        <span class="stats-box__text">
+                                            Umsatzwachstum
+                                        </span>
+                                    </div>
+                                    <div class="stats-box">
+                                        <span class="stats-box__val">
+                                            1000
+                                        </span>
+                                        <span class="stats-box__text">
+                                            Mitarbeiter geführt
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="hero__slider-rating">
+                                    <div class="hero__slider-stars">
+                                        <span>4.9</span>
+                                        <span>
+                                            <img
+                                                width="24"
+                                                height="24"
+                                                src="./assets/images/icons/ico-star.svg"
+                                                alt="Star"
+                                            />
+                                            <img
+                                                width="24"
+                                                height="24"
+                                                src="./assets/images/icons/ico-star.svg"
+                                                alt="Star"
+                                            />
+                                            <img
+                                                width="24"
+                                                height="24"
+                                                src="./assets/images/icons/ico-star.svg"
+                                                alt="Star"
+                                            />
+                                            <img
+                                                width="24"
+                                                height="24"
+                                                src="./assets/images/icons/ico-star.svg"
+                                                alt="Star"
+                                            />
+                                            <img
+                                                width="24"
+                                                height="24"
+                                                src="./assets/images/icons/ico-star.svg"
+                                                alt="Star"
+                                            />
+                                        </span>
+                                    </div>
+                                    <div class="hero__slider-clients">
+                                        <span>
+                                            <img
+                                                width="56"
+                                                height="56"
+                                                src="./assets/images/ellipse_1.png"
+                                                alt="Icon"
+                                            />
+                                            <img
+                                                width="56"
+                                                height="56"
+                                                src="./assets/images/ellipse_2.png"
+                                                alt="Icon"
+                                            />
+                                            <img
+                                                width="56"
+                                                height="56"
+                                                src="./assets/images/ellipse_3.png"
+                                                alt="Icon"
+                                            />
+                                        </span>
+                                        <span> 30+ Hotels as clients </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="hero__slider-after beer-reveal"
+                                data-beer-label="after"
+                            >
+                                <div class="hero__slider-wrapper wrapper--left">
+                                    <img
+                                        class="slider-thumb"
+                                        src="./assets/images/hero-before.jpg"
+                                        alt="Photo"
+                                    />
+                                    <div class="hero__slider-logo">
+                                        <img
+                                            width="96"
+                                            height="96"
+                                            src="./assets/images/icons/logo-white.png"
+                                            alt="Logo"
+                                        />
+                                    </div>
+                                    <div class="hero__slider-content">
+                                        <p class="hero__slider-subtitle">
+                                            Vivamus pretium
+                                        </p>
+                                        <h2 class="hero__slider-title">
+                                            vestibulum varius turpis
+                                        </h2>
+                                        <p class="hero__slider-descr">
+                                            Fusce lacinia ante eu scelerisque
+                                            dapibus. Nunc quis sem consequat,
+                                            viverra odio ut, porta nisl. Vivamus
+                                            at consequat sem.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero__num mobile--visible">
+                        <div class="hero__num-cards">
+                            <div class="hero__num-item">
+                                <span>20+</span>
+                                <p>Jahre Hotellerie & Gastronomie</p>
+                            </div>
+                            <div class="hero__num-item">
+                                <span>170%</span>
+                                <p>Umsatzwachstum</p>
+                            </div>
+                            <div class="hero__num-item">
+                                <span>1000</span>
+                                <p>Mitarbeiter geführt</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
             <section class="benefits">
                 <div class="container">
@@ -213,13 +379,30 @@
                         </p>
                     </div>
                     <div class="previews__content">
-                        <div class="previews__content-col">
+                        <div class="previews__content-col col--left">
                             <div class="previews__content-image">
                                 <img
                                     loading="lazy"
                                     src="./assets/images/content_2.jpg"
                                     alt="Photo"
                                 />
+                            </div>
+                            <div class="previews__content-footnote footnote--f">
+                                <p>Gestresste und unglückliche Mitarbeiter</p>
+                            </div>
+                            <div class="previews__content-footnote footnote--s">
+                                <p>Kaum Marge am Ende des Jahres</p>
+                            </div>
+                            <div class="previews__content-footnote footnote--t">
+                                <p>Viel Arbeit, wenig Gäste</p>
+                            </div>
+                            <div
+                                class="previews__content-footnote footnote--for"
+                            >
+                                <p>
+                                    Keine Zeit für Wachstum. Gefangen im
+                                    Tagesgeschäft.
+                                </p>
                             </div>
                             <div class="previews__content-text">
                                 <h3>Wie es nicht laufen soll:</h3>
@@ -231,13 +414,39 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="previews__content-col">
+                        <div class="previews__content-col col--right">
                             <div class="previews__content-image">
                                 <img
                                     loading="lazy"
                                     src="./assets/images/content_3.jpg"
                                     alt="Photo"
                                 />
+                            </div>
+                            <div class="previews__content-footnote footnote--f">
+                                <p>
+                                    Es läuft einfach alles. Jeder weiß was zu
+                                    tun ist.
+                                </p>
+                            </div>
+                            <div class="previews__content-footnote footnote--s">
+                                <p>
+                                    Wir wissen genau über unsere Finanzen
+                                    bescheid.
+                                </p>
+                            </div>
+                            <div class="previews__content-footnote footnote--t">
+                                <p>
+                                    Unsere Gäste sind glücklich und wir sind
+                                    ausgebucht.
+                                </p>
+                            </div>
+                            <div
+                                class="previews__content-footnote footnote--for"
+                            >
+                                <p>
+                                    Unsere Mitarbeiter sind glücklich und wir
+                                    ziehen alle an einem Strang.
+                                </p>
                             </div>
                             <div class="previews__content-text">
                                 <h3>Wie es laufen soll:</h3>
@@ -384,7 +593,7 @@
                                     <div class="thumbnail">
                                         <img
                                             loading="lazy"
-                                            src="./assets/images/Знімок екрана 2025-06-04 о 15.06.08.png"
+                                            src="./assets/images/content_5.jpg"
                                             alt="Photo"
                                         />
                                     </div>
@@ -638,7 +847,7 @@
                     </div>
                     <a
                         href="javascript: void(0)"
-                        class="previews__link link--accent"
+                        class="menu__link link--accent"
                         >Get Started</a
                     >
                 </div>
@@ -662,204 +871,224 @@
                         <div class="points__item-deco">
                             <div class="points__item-deco-bg"></div>
                         </div>
-                        <div class="points__item-info">
-                            <div class="points__item-box">
-                                <h2 class="points__item-title">
-                                    Optimieren und messen
-                                </h2>
-                                <p class="points__item-description">
-                                    Lorem ipsum dolor sit amet consectetur.
-                                    Integer ultricies porta amet suspendisse
-                                    faucibus facilisis posuere. Suspen libero
-                                    orci, porta non nibh vitae, mattis egestas
-                                    risus.
-                                </p>
-                            </div>
-                            <div class="points__item-box">
-                                <ul class="points__item-list">
-                                    <li class="points__item-el">
+                        <div class="points__item-wrapper">
+                            <div class="points__item-info">
+                                <div class="points__item-box">
+                                    <h2 class="points__item-title">
+                                        Optimieren und messen
+                                    </h2>
+                                    <p class="points__item-description">
+                                        Lorem ipsum dolor sit amet consectetur.
                                         Integer ultricies porta amet suspendisse
-                                        faucibus facilisis posuere
-                                    </li>
-                                    <li class="points__item-el">
+                                        faucibus facilisis posuere. Suspen
+                                        libero orci, porta non nibh vitae,
+                                        mattis egestas risus.
+                                    </p>
+                                </div>
+                                <div class="points__item-box">
+                                    <ul class="points__item-list">
+                                        <li class="points__item-el">
+                                            Integer ultricies porta amet
+                                            suspendisse faucibus facilisis
+                                            posuere
+                                        </li>
+                                        <li class="points__item-el">
+                                            Integer ultricies porta amet
+                                            suspendisse faucibus facilisis
+                                            posuere
+                                        </li>
+                                        <li class="points__item-el">
+                                            Integer ultricies porta amet
+                                            suspendisse faucibus facilisis
+                                            posuere
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="points__item-box">
+                                    <p class="points__item-description">
+                                        Lorem ipsum dolor sit amet consectetur.
                                         Integer ultricies porta amet suspendisse
-                                        faucibus facilisis posuere
-                                    </li>
-                                    <li class="points__item-el">
-                                        Integer ultricies porta amet suspendisse
-                                        faucibus facilisis posuere
-                                    </li>
-                                </ul>
+                                        faucibus facilisis posuere. Suspen
+                                        libero orci, porta non nibh vitae,
+                                        mattis egestas risus.
+                                    </p>
+                                </div>
                             </div>
-                            <div class="points__item-box">
-                                <p class="points__item-description">
-                                    Lorem ipsum dolor sit amet consectetur.
-                                    Integer ultricies porta amet suspendisse
-                                    faucibus facilisis posuere. Suspen libero
-                                    orci, porta non nibh vitae, mattis egestas
-                                    risus.
-                                </p>
+                            <div class="points__item-thumb">
+                                <img
+                                    loading="lazy"
+                                    src="./assets/images/points_1.jpg"
+                                    alt="Thumbnail"
+                                />
                             </div>
-                        </div>
-                        <div class="points__item-thumb">
-                            <img
-                                loading="lazy"
-                                src="./assets/images/points_1.jpg"
-                                alt="Thumbnail"
-                            />
                         </div>
                     </div>
                     <div class="points__item">
                         <div class="points__item-deco">
                             <div class="points__item-deco-bg"></div>
                         </div>
-                        <div class="points__item-info">
-                            <div class="points__item-box">
-                                <h2 class="points__item-title">
-                                    Optimieren und messen
-                                </h2>
-                                <p class="points__item-description">
-                                    Lorem ipsum dolor sit amet consectetur.
-                                    Integer ultricies porta amet suspendisse
-                                    faucibus facilisis posuere. Suspen libero
-                                    orci, porta non nibh vitae, mattis egestas
-                                    risus.
-                                </p>
-                            </div>
-                            <div class="points__item-box">
-                                <ul class="points__item-list">
-                                    <li class="points__item-el">
+                        <div class="points__item-wrapper">
+                            <div class="points__item-info">
+                                <div class="points__item-box">
+                                    <h2 class="points__item-title">
+                                        Optimieren und messen
+                                    </h2>
+                                    <p class="points__item-description">
+                                        Lorem ipsum dolor sit amet consectetur.
                                         Integer ultricies porta amet suspendisse
-                                        faucibus facilisis posuere
-                                    </li>
-                                    <li class="points__item-el">
+                                        faucibus facilisis posuere. Suspen
+                                        libero orci, porta non nibh vitae,
+                                        mattis egestas risus.
+                                    </p>
+                                </div>
+                                <div class="points__item-box">
+                                    <ul class="points__item-list">
+                                        <li class="points__item-el">
+                                            Integer ultricies porta amet
+                                            suspendisse faucibus facilisis
+                                            posuere
+                                        </li>
+                                        <li class="points__item-el">
+                                            Integer ultricies porta amet
+                                            suspendisse faucibus facilisis
+                                            posuere
+                                        </li>
+                                        <li class="points__item-el">
+                                            Integer ultricies porta amet
+                                            suspendisse faucibus facilisis
+                                            posuere
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="points__item-box">
+                                    <p class="points__item-description">
+                                        Lorem ipsum dolor sit amet consectetur.
                                         Integer ultricies porta amet suspendisse
-                                        faucibus facilisis posuere
-                                    </li>
-                                    <li class="points__item-el">
-                                        Integer ultricies porta amet suspendisse
-                                        faucibus facilisis posuere
-                                    </li>
-                                </ul>
+                                        faucibus facilisis posuere. Suspen
+                                        libero orci, porta non nibh vitae,
+                                        mattis egestas risus.
+                                    </p>
+                                </div>
                             </div>
-                            <div class="points__item-box">
-                                <p class="points__item-description">
-                                    Lorem ipsum dolor sit amet consectetur.
-                                    Integer ultricies porta amet suspendisse
-                                    faucibus facilisis posuere. Suspen libero
-                                    orci, porta non nibh vitae, mattis egestas
-                                    risus.
-                                </p>
+                            <div class="points__item-thumb">
+                                <img
+                                    loading="lazy"
+                                    src="./assets/images/points_2.jpg"
+                                    alt="Thumbnail"
+                                />
                             </div>
-                        </div>
-                        <div class="points__item-thumb">
-                            <img
-                                loading="lazy"
-                                src="./assets/images/points_2.jpg"
-                                alt="Thumbnail"
-                            />
                         </div>
                     </div>
                     <div class="points__item">
                         <div class="points__item-deco">
                             <div class="points__item-deco-bg"></div>
                         </div>
-                        <div class="points__item-info">
-                            <div class="points__item-box">
-                                <h2 class="points__item-title">
-                                    Optimieren und messen
-                                </h2>
-                                <p class="points__item-description">
-                                    Lorem ipsum dolor sit amet consectetur.
-                                    Integer ultricies porta amet suspendisse
-                                    faucibus facilisis posuere. Suspen libero
-                                    orci, porta non nibh vitae, mattis egestas
-                                    risus.
-                                </p>
-                            </div>
-                            <div class="points__item-box">
-                                <ul class="points__item-list">
-                                    <li class="points__item-el">
+                        <div class="points__item-wrapper">
+                            <div class="points__item-info">
+                                <div class="points__item-box">
+                                    <h2 class="points__item-title">
+                                        Optimieren und messen
+                                    </h2>
+                                    <p class="points__item-description">
+                                        Lorem ipsum dolor sit amet consectetur.
                                         Integer ultricies porta amet suspendisse
-                                        faucibus facilisis posuere
-                                    </li>
-                                    <li class="points__item-el">
+                                        faucibus facilisis posuere. Suspen
+                                        libero orci, porta non nibh vitae,
+                                        mattis egestas risus.
+                                    </p>
+                                </div>
+                                <div class="points__item-box">
+                                    <ul class="points__item-list">
+                                        <li class="points__item-el">
+                                            Integer ultricies porta amet
+                                            suspendisse faucibus facilisis
+                                            posuere
+                                        </li>
+                                        <li class="points__item-el">
+                                            Integer ultricies porta amet
+                                            suspendisse faucibus facilisis
+                                            posuere
+                                        </li>
+                                        <li class="points__item-el">
+                                            Integer ultricies porta amet
+                                            suspendisse faucibus facilisis
+                                            posuere
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="points__item-box">
+                                    <p class="points__item-description">
+                                        Lorem ipsum dolor sit amet consectetur.
                                         Integer ultricies porta amet suspendisse
-                                        faucibus facilisis posuere
-                                    </li>
-                                    <li class="points__item-el">
-                                        Integer ultricies porta amet suspendisse
-                                        faucibus facilisis posuere
-                                    </li>
-                                </ul>
+                                        faucibus facilisis posuere. Suspen
+                                        libero orci, porta non nibh vitae,
+                                        mattis egestas risus.
+                                    </p>
+                                </div>
                             </div>
-                            <div class="points__item-box">
-                                <p class="points__item-description">
-                                    Lorem ipsum dolor sit amet consectetur.
-                                    Integer ultricies porta amet suspendisse
-                                    faucibus facilisis posuere. Suspen libero
-                                    orci, porta non nibh vitae, mattis egestas
-                                    risus.
-                                </p>
+                            <div class="points__item-thumb">
+                                <img
+                                    loading="lazy"
+                                    src="./assets/images/points_3.jpg"
+                                    alt="Thumbnail"
+                                />
                             </div>
-                        </div>
-                        <div class="points__item-thumb">
-                            <img
-                                loading="lazy"
-                                src="./assets/images/points_3.jpg"
-                                alt="Thumbnail"
-                            />
                         </div>
                     </div>
                     <div class="points__item">
                         <div class="points__item-deco">
                             <div class="points__item-deco-bg"></div>
                         </div>
-                        <div class="points__item-info">
-                            <div class="points__item-box">
-                                <h2 class="points__item-title">
-                                    Optimieren und messen
-                                </h2>
-                                <p class="points__item-description">
-                                    Lorem ipsum dolor sit amet consectetur.
-                                    Integer ultricies porta amet suspendisse
-                                    faucibus facilisis posuere. Suspen libero
-                                    orci, porta non nibh vitae, mattis egestas
-                                    risus.
-                                </p>
-                            </div>
-                            <div class="points__item-box">
-                                <ul class="points__item-list">
-                                    <li class="points__item-el">
+                        <div class="points__item-wrapper">
+                            <div class="points__item-info">
+                                <div class="points__item-box">
+                                    <h2 class="points__item-title">
+                                        Optimieren und messen
+                                    </h2>
+                                    <p class="points__item-description">
+                                        Lorem ipsum dolor sit amet consectetur.
                                         Integer ultricies porta amet suspendisse
-                                        faucibus facilisis posuere
-                                    </li>
-                                    <li class="points__item-el">
+                                        faucibus facilisis posuere. Suspen
+                                        libero orci, porta non nibh vitae,
+                                        mattis egestas risus.
+                                    </p>
+                                </div>
+                                <div class="points__item-box">
+                                    <ul class="points__item-list">
+                                        <li class="points__item-el">
+                                            Integer ultricies porta amet
+                                            suspendisse faucibus facilisis
+                                            posuere
+                                        </li>
+                                        <li class="points__item-el">
+                                            Integer ultricies porta amet
+                                            suspendisse faucibus facilisis
+                                            posuere
+                                        </li>
+                                        <li class="points__item-el">
+                                            Integer ultricies porta amet
+                                            suspendisse faucibus facilisis
+                                            posuere
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="points__item-box">
+                                    <p class="points__item-description">
+                                        Lorem ipsum dolor sit amet consectetur.
                                         Integer ultricies porta amet suspendisse
-                                        faucibus facilisis posuere
-                                    </li>
-                                    <li class="points__item-el">
-                                        Integer ultricies porta amet suspendisse
-                                        faucibus facilisis posuere
-                                    </li>
-                                </ul>
+                                        faucibus facilisis posuere. Suspen
+                                        libero orci, porta non nibh vitae,
+                                        mattis egestas risus.
+                                    </p>
+                                </div>
                             </div>
-                            <div class="points__item-box">
-                                <p class="points__item-description">
-                                    Lorem ipsum dolor sit amet consectetur.
-                                    Integer ultricies porta amet suspendisse
-                                    faucibus facilisis posuere. Suspen libero
-                                    orci, porta non nibh vitae, mattis egestas
-                                    risus.
-                                </p>
+                            <div class="points__item-thumb">
+                                <img
+                                    loading="lazy"
+                                    src="./assets/images/points_4.jpg"
+                                    alt="Thumbnail"
+                                />
                             </div>
-                        </div>
-                        <div class="points__item-thumb">
-                            <img
-                                loading="lazy"
-                                src="./assets/images/points_4.jpg"
-                                alt="Thumbnail"
-                            />
                         </div>
                     </div>
                     <a
@@ -870,19 +1099,619 @@
                 </div>
             </section>
             <section class="gallery">
-                <div class="container">gallery SECTION</div>
+                <div class="container">
+                    <div class="section-header">
+                        <p class="section-header__subtitle">
+                            Aliquam volutpat odio
+                        </p>
+                        <h2 class="section-header__title">
+                            Etiam convallis vel dui at varius Quisque
+                        </h2>
+                        <p class="section-header__description">
+                            Suspendisse tincidunt est urna, non consectetur et.
+                            Phasellus porta et diam eget vehicula.
+                        </p>
+                    </div>
+                    <div class="gallery__content swiper">
+                        <div class="gallery__content-wrapper swiper-wrapper">
+                            <div class="gallery__content-slide swiper-slide">
+                                <div class="gallery__content-item">
+                                    <div class="thumb">
+                                        <img
+                                            loading="lazy"
+                                            src="./assets/images/slide_1.jpg"
+                                            alt="Slide"
+                                        />
+                                    </div>
+                                    <div class="info">
+                                        <h4 class="info__title">Hotel</h4>
+                                        <p class="info__description">
+                                            Integer dignissim blandit libero.
+                                            Fusce at ante facilisis, pulvinar
+                                            odio sit amet, lobortis urna.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gallery__content-slide swiper-slide">
+                                <div class="gallery__content-item">
+                                    <div class="thumb">
+                                        <img
+                                            loading="lazy"
+                                            src="./assets/images/slide_2.jpg"
+                                            alt="Slide"
+                                        />
+                                    </div>
+                                    <div class="info">
+                                        <h4 class="info__title">Fine Dining</h4>
+                                        <p class="info__description">
+                                            Integer dignissim blandit libero.
+                                            Fusce at ante facilisis, pulvinar
+                                            odio sit amet, lobortis urna.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gallery__content-slide swiper-slide">
+                                <div class="gallery__content-item">
+                                    <div class="thumb">
+                                        <img
+                                            loading="lazy"
+                                            src="./assets/images/slide_3.jpg"
+                                            alt="Slide"
+                                        />
+                                    </div>
+                                    <div class="info">
+                                        <h4 class="info__title">Restaurant</h4>
+                                        <p class="info__description">
+                                            Integer dignissim blandit libero.
+                                            Fusce at ante facilisis, pulvinar
+                                            odio sit amet, lobortis urna.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gallery__content-slide swiper-slide">
+                                <div class="gallery__content-item">
+                                    <div class="thumb">
+                                        <img
+                                            loading="lazy"
+                                            src="./assets/images/slide_4.jpg"
+                                            alt="Slide"
+                                        />
+                                    </div>
+                                    <div class="info">
+                                        <h4 class="info__title">
+                                            familienbetriebe
+                                        </h4>
+                                        <p class="info__description">
+                                            Integer dignissim blandit libero.
+                                            Fusce at ante facilisis, pulvinar
+                                            odio sit amet, lobortis urna.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery__nav">
+                        <div class="gallery__nav-btn btn--prev">
+                            <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M9.57 5.92969L3.5 11.9997L9.57 18.0697"
+                                    stroke="#292D32"
+                                    stroke-opacity="1"
+                                    stroke-width="1.5"
+                                    stroke-miterlimit="10"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M20.4999 12H3.66992"
+                                    stroke="#292D32"
+                                    stroke-opacity="1"
+                                    stroke-width="1.5"
+                                    stroke-miterlimit="10"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </div>
+                        <div class="gallery__nav-btn btn--next">
+                            <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M14.4297 5.92969L20.4997 11.9997L14.4297 18.0697"
+                                    stroke="#292D32"
+                                    stroke-width="1.5"
+                                    stroke-miterlimit="10"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    d="M3.5 12H20.33"
+                                    stroke="#292D32"
+                                    stroke-width="1.5"
+                                    stroke-miterlimit="10"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </div>
+                    </div>
+                    <a
+                        href="javascript: void(0)"
+                        class="gallery__link link--accent"
+                        >Get Started</a
+                    >
+                </div>
             </section>
             <section class="advantages">
-                <div class="container">advantages SECTION</div>
+                <div class="container">
+                    <div class="advantages__content">
+                        <div class="advantages__inner">
+                            <div class="advantages__deco">
+                                <p class="advantages__deco-title">
+                                    SCROLL DOWN
+                                </p>
+                                <div class="arrow">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="advantages__info">
+                                <div class="info-box">
+                                    <h4 class="info-box__title">
+                                        Sed tincidunt
+                                    </h4>
+                                    <p class="info-box__text">
+                                        Vivamus placerat at justo sed consequat.
+                                        Donec risus neque, sagittis eget sapien
+                                        sit amet, congue accumsan tortor.
+                                        Pellentesque venenatis, nunc non
+                                        tincidunt pretium, nisi metus pretium
+                                        mi, eget aliquet nulla justo quis nunc.
+                                    </p>
+                                </div>
+                                <div class="info-box">
+                                    <h4 class="info-box__title">
+                                        Nulla aliquam
+                                    </h4>
+                                    <p class="info-box__text">
+                                        Nam laoreet hendrerit mauris, vitae
+                                        sodales magna vehicula aliquam. Fusce
+                                        ultrices ornare convallis. Donec
+                                        aliquam, ipsum a tempus porta, quam
+                                        velit congue sapien.
+                                    </p>
+                                </div>
+                                <div class="info-box">
+                                    <h4 class="info-box__title">
+                                        Nulla aliquam
+                                    </h4>
+                                    <p class="info-box__text">
+                                        Nam laoreet hendrerit mauris, vitae
+                                        sodales magna vehicula aliquam. Fusce
+                                        ultrices ornare convallis. Donec
+                                        aliquam, ipsum a tempus porta, quam
+                                        velit congue sapien.
+                                    </p>
+                                </div>
+                                <div class="info-box">
+                                    <h4 class="info-box__title">
+                                        Nulla aliquam
+                                    </h4>
+                                    <p class="info-box__text">
+                                        Nam laoreet hendrerit mauris, vitae
+                                        sodales magna vehicula aliquam. Fusce
+                                        ultrices ornare convallis. Donec
+                                        aliquam, ipsum a tempus porta, quam
+                                        velit congue sapien.
+                                    </p>
+                                </div>
+                                <div class="info-box">
+                                    <h4 class="info-box__title">
+                                        Nulla aliquam
+                                    </h4>
+                                    <p class="info-box__text">
+                                        Nam laoreet hendrerit mauris, vitae
+                                        sodales magna vehicula aliquam. Fusce
+                                        ultrices ornare convallis. Donec
+                                        aliquam, ipsum a tempus porta, quam
+                                        velit congue sapien.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="advantages__images">
+                            <img
+                                width="280"
+                                height="280"
+                                loading="lazy"
+                                src="./assets/images/icons/logo-lg.png"
+                                alt="Logo"
+                            />
+                            <img
+                                loading="lazy"
+                                src="./assets/images/man_1.png"
+                                alt="Photo"
+                            />
+                        </div>
+                    </div>
+                    <a
+                        href="javascript: void(0)"
+                        class="advantages__link link--accent"
+                        >Get Started</a
+                    >
+                </div>
             </section>
             <section class="video">
-                <div class="container">video SECTION</div>
+                <div class="container">
+                    <div class="section-header">
+                        <p class="section-header__subtitle">
+                            Aliquam volutpat odio
+                        </p>
+                        <h2 class="section-header__title">
+                            Donec hendrerit lacus quis quam
+                        </h2>
+                        <p class="section-header__description">
+                            Suspendisse tincidunt est urna, non tincidunt ante
+                            consectetur et.
+                        </p>
+                    </div>
+                    <div class="video__box">
+                        <button class="video__box-play btn--play">
+                            <svg
+                                width="48"
+                                height="57"
+                                viewBox="0 0 48 57"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M48 28.5L-2.61013e-06 56.2128L-1.87399e-07 0.787185L48 28.5Z"
+                                    fill="#141933"
+                                />
+                            </svg>
+                        </button>
+                        <button class="video__box-play btn--pause">
+                            <svg
+                                width="48"
+                                height="57"
+                                viewBox="0 0 48 57"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <rect
+                                    x="8"
+                                    y="0"
+                                    width="10"
+                                    height="57"
+                                    fill="#141933"
+                                />
+                                <rect
+                                    x="30"
+                                    y="0"
+                                    width="10"
+                                    height="57"
+                                    fill="#141933"
+                                />
+                            </svg>
+                        </button>
+                        <video muted loop playsinline>
+                            <source
+                                src="./assets/video/video.mp4"
+                                type="video/mp4"
+                            />
+                            Your browser does not support the tag.
+                        </video>
+                    </div>
+                    <a
+                        href="javascript: void(0)"
+                        class="video__link link--accent"
+                        >Get Started</a
+                    >
+                    <div class="video__stats">
+                        <div class="video__stats-rating">
+                            <span class="video__stats-val">4.9</span>
+                            <span class="video__stats-stars">
+                                <img
+                                    width="24"
+                                    height="24"
+                                    loading="lazy"
+                                    src="./assets/images/icons/ico-star.svg"
+                                    alt="Star"
+                                />
+                                <img
+                                    width="24"
+                                    height="24"
+                                    loading="lazy"
+                                    src="./assets/images/icons/ico-star.svg"
+                                    alt="Star"
+                                />
+                                <img
+                                    width="24"
+                                    height="24"
+                                    loading="lazy"
+                                    src="./assets/images/icons/ico-star.svg"
+                                    alt="Star"
+                                />
+                                <img
+                                    width="24"
+                                    height="24"
+                                    loading="lazy"
+                                    src="./assets/images/icons/ico-star.svg"
+                                    alt="Star"
+                                />
+                                <img
+                                    width="24"
+                                    height="24"
+                                    loading="lazy"
+                                    src="./assets/images/icons/ico-star.svg"
+                                    alt="Star"
+                                />
+                            </span>
+                        </div>
+                        <div class="video__stats-clients">
+                            <span class="video__stats-images">
+                                <img
+                                    width="56"
+                                    height="56"
+                                    src="./assets/images/ellipse_1.png"
+                                    alt="Icon"
+                                />
+                                <img
+                                    width="56"
+                                    height="56"
+                                    src="./assets/images/ellipse_2.png"
+                                    alt="Icon"
+                                />
+                                <img
+                                    width="56"
+                                    height="56"
+                                    src="./assets/images/ellipse_3.png"
+                                    alt="Icon"
+                                />
+                            </span>
+                            <span class="video__stats-info"
+                                >30+ Hotels as clients</span
+                            >
+                        </div>
+                    </div>
+                </div>
             </section>
             <section class="pros">
-                <div class="container">pros SECTION</div>
+                <div class="container">
+                    <div class="pros__content">
+                        <div class="pros__logo">
+                            <img
+                                width="280"
+                                height="280"
+                                loading="lazy"
+                                src="./assets/images/icons/logo-v2.png"
+                                alt="Logo"
+                            />
+                        </div>
+                        <div class="pros__info">
+                            <p>Aliquam volutpat odio</p>
+                            <h2>Fusce vitae porttitor odio</h2>
+                            <p>
+                                Aenean consectetur magna nisi, nec porttitor
+                                magna bibendum sed. Morbi molestie finibus nunc
+                                nec egestas. Nulla id placerat mi. Quisque quis
+                                vestibulum neque. Aliquam posuere massa quis
+                                finibus laoreet.
+                            </p>
+                            <a
+                                href="javascript: void(0)"
+                                class="pros__link link--accent"
+                                >Get Started</a
+                            >
+                            <div class="pros__stats">
+                                <div class="pros__stats-clients">
+                                    <span class="pros__stats-images">
+                                        <img
+                                            width="56"
+                                            height="56"
+                                            src="./assets/images/ellipse_1.png"
+                                            alt="Icon"
+                                        />
+                                        <img
+                                            width="56"
+                                            height="56"
+                                            src="./assets/images/ellipse_2.png"
+                                            alt="Icon"
+                                        />
+                                        <img
+                                            width="56"
+                                            height="56"
+                                            src="./assets/images/ellipse_3.png"
+                                            alt="Icon"
+                                        />
+                                    </span>
+                                    <span class="pros__stats-info"
+                                        >30+ Hotels as clients</span
+                                    >
+                                </div>
+                                <div class="pros__stats-rating">
+                                    <span class="pros__stats-val">4.9</span>
+                                    <span class="pros__stats-stars">
+                                        <img
+                                            width="24"
+                                            height="24"
+                                            loading="lazy"
+                                            src="./assets/images/icons/ico-star.svg"
+                                            alt="Star"
+                                        />
+                                        <img
+                                            width="24"
+                                            height="24"
+                                            loading="lazy"
+                                            src="./assets/images/icons/ico-star.svg"
+                                            alt="Star"
+                                        />
+                                        <img
+                                            width="24"
+                                            height="24"
+                                            loading="lazy"
+                                            src="./assets/images/icons/ico-star.svg"
+                                            alt="Star"
+                                        />
+                                        <img
+                                            width="24"
+                                            height="24"
+                                            loading="lazy"
+                                            src="./assets/images/icons/ico-star.svg"
+                                            alt="Star"
+                                        />
+                                        <img
+                                            width="24"
+                                            height="24"
+                                            loading="lazy"
+                                            src="./assets/images/icons/ico-star.svg"
+                                            alt="Star"
+                                        />
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pros__image">
+                            <img
+                                loading="lazy"
+                                src="./assets/images/man_2.png"
+                                alt="Photo"
+                            />
+                        </div>
+                        <div class="pros__about">
+                            <div class="pros__about-box">
+                                <p class="pros__about-title">Years</p>
+                                <span class="pros__about-val">20+</span>
+                            </div>
+                            <div class="pros__about-box">
+                                <p class="pros__about-title">Projects</p>
+                                <span class="pros__about-val">152+</span>
+                            </div>
+                            <div class="pros__about-box">
+                                <p class="pros__about-title">Clients</p>
+                                <span class="pros__about-val">50+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
             <section class="faq">
-                <div class="container">faq SECTION</div>
+                <div class="container">
+                    <div class="section-header">
+                        <p class="section-header__subtitle">
+                            Lorem ipsum dolor
+                        </p>
+                        <h2 class="section-header__title">
+                            Quisque ultricies nunc varius congue
+                        </h2>
+                        <p class="section-header__description">
+                            Sed vitae velit aliquam, tincidunt ipsum non,
+                            laoreet enim.
+                        </p>
+                    </div>
+                    <div class="faq__content">
+                        <div class="faq__item">
+                            <h3 class="faq__item-title">
+                                Nulla ornare massa non fringilla aliquet. Proin
+                                scelerisque eleifend feugiat?
+                            </h3>
+                            <div class="faq__item-inner">
+                                <p class="faq__item-description">
+                                    Ut aliquet quam vitae nibh tincidunt,
+                                    commodo porta lorem rutrum. Quisque posuere,
+                                    eros vel condimentum maximus, dolor dolor
+                                    ultricies dui, a aliquet tellus turpis quis
+                                    nisi. Pellentesque auctor ante nec ante
+                                    finibus scelerisque. Quisque porta dignissim
+                                    varius. Morbi a mi eget dolor consequat
+                                    blandit eu at purus.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq__item">
+                            <h3 class="faq__item-title">
+                                Nulla ornare massa non fringilla aliquet. Proin
+                                scelerisque eleifend feugiat?
+                            </h3>
+                            <div class="faq__item-inner">
+                                <p class="faq__item-description">
+                                    Ut aliquet quam vitae nibh tincidunt,
+                                    commodo porta lorem rutrum. Quisque posuere,
+                                    eros vel condimentum maximus, dolor dolor
+                                    ultricies dui, a aliquet tellus turpis quis
+                                    nisi. Pellentesque auctor ante nec ante
+                                    finibus scelerisque. Quisque porta dignissim
+                                    varius. Morbi a mi eget dolor consequat
+                                    blandit eu at purus.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq__item">
+                            <h3 class="faq__item-title">
+                                Nulla ornare massa non fringilla aliquet. Proin
+                                scelerisque eleifend feugiat?
+                            </h3>
+                            <div class="faq__item-inner">
+                                <p class="faq__item-description">
+                                    Ut aliquet quam vitae nibh tincidunt,
+                                    commodo porta lorem rutrum. Quisque posuere,
+                                    eros vel condimentum maximus, dolor dolor
+                                    ultricies dui, a aliquet tellus turpis quis
+                                    nisi. Pellentesque auctor ante nec ante
+                                    finibus scelerisque. Quisque porta dignissim
+                                    varius. Morbi a mi eget dolor consequat
+                                    blandit eu at purus.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq__item">
+                            <h3 class="faq__item-title">
+                                Nulla ornare massa non fringilla aliquet. Proin
+                                scelerisque eleifend feugiat?
+                            </h3>
+                            <div class="faq__item-inner">
+                                <p class="faq__item-description">
+                                    Ut aliquet quam vitae nibh tincidunt,
+                                    commodo porta lorem rutrum. Quisque posuere,
+                                    eros vel condimentum maximus, dolor dolor
+                                    ultricies dui, a aliquet tellus turpis quis
+                                    nisi. Pellentesque auctor ante nec ante
+                                    finibus scelerisque. Quisque porta dignissim
+                                    varius. Morbi a mi eget dolor consequat
+                                    blandit eu at purus.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq__links">
+                        <a
+                            href="javascript: void(0)"
+                            class="faq__link link--accent"
+                            >Get Started</a
+                        >
+                        <a
+                            href="javascript: void(0)"
+                            class="faq__link link--secondary"
+                            >Show More</a
+                        >
+                    </div>
+                </div>
             </section>
         </main>
         <footer class="footer">
@@ -1038,6 +1867,10 @@
         <script
             defer
             src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+        ></script>
+        <script
+            defer
+            src="https://unpkg.com/beerslider/dist/BeerSlider.js"
         ></script>
         <script type="module" src="./assets/scripts/script.js"></script>
     </body>

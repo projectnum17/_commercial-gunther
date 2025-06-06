@@ -1,44 +1,67 @@
+@use '../base/media' as *;
+
 .points {
     counter-reset: item-counter;
 
     .section-header {
-        margin-bottom: 373px;
+        margin-bottom: 152px;
+        @include media('mobile') {
+            margin-bottom: 48px;
+        }
     }
 
     &__item {
         display: flex;
-        align-items: stretch;
+        flex-direction: column;
         position: relative;
-        counter-increment: item-counter;
-
-        &::before {
-            font: 700 150px / 100% var(--ff-base);
-            content: counter(item-counter, decimal-leading-zero);
-            text-transform: uppercase;
-            position: absolute;
-            top: -30px;
-            transform: translateY(-100%);
-            z-index: 2;
-        }
 
         &-deco {
             width: 236px;
             height: 241px;
             display: flex;
-            position: absolute;
-            top: 20px;
-            transform: translateY(-100%);
+            position: relative;
+            transform: translateY(20px);
+            counter-increment: item-counter;
+
+            @include media('mobile') {
+                width: 50%;
+                top: 0;
+                height: 100px;
+                z-index: -1;
+            }
+
+            &::before {
+                font: 700 150px / 100% var(--ff-base);
+                content: counter(item-counter, decimal-leading-zero);
+                text-transform: uppercase;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 2;
+                @include media('mobile') {
+                    font-size: 72px;
+                    top: 0;
+                }
+            }
 
             &-bg {
                 margin-left: auto;
                 width: 82.4%;
                 height: 100%;
                 background: var(--accent-color);
+
+                @include media('mobile') {
+                    width: 100%;
+                }
             }
         }
 
         &:not(:last-of-type) {
-            margin-bottom: 373px;
+            margin-bottom: 152px;
+
+            @include media('mobile') {
+                margin-bottom: 36px;
+            }
         }
 
         &:last-of-type {
@@ -50,11 +73,25 @@
             width: 57.5%;
             border-radius: 0 16px 16px 0;
             overflow: hidden;
+            @include media('mobile') {
+                max-width: 100%;
+                width: 100%;
+                border-radius: 16px 16px 0 0;
+                height: 350px;
+            }
 
             img {
                 height: 100%;
                 width: 100%;
                 object-fit: cover;
+            }
+        }
+
+        &-wrapper {
+            display: flex;
+            align-items: stretch;
+            @include media('mobile') {
+                flex-direction: column-reverse;
             }
         }
 
@@ -67,21 +104,49 @@
             border-radius: 16px 0 0 16px;
             backdrop-filter: blur(35px);
             background: #a7a7a71a;
+
+            @include media('tablet') {
+                padding: 35px;
+                gap: 32px;
+            }
+            @include media('mobile') {
+                padding: 20px;
+                gap: 25px;
+                width: 100%;
+                border-radius: 0 0 16px 16px;
+            }
         }
 
         &-box {
             padding-inline: 24px;
+            @include media('tablet') {
+                padding-inline: 0px;
+            }
         }
 
         &-title {
             font: 700 48px / 120% var(--ff-base);
             text-transform: capitalize;
             margin-bottom: 16px;
+            hyphens: auto;
+            overflow-wrap: break-word;
+            @include media('tablet') {
+                font-size: 36px;
+            }
+            @include media('mobile') {
+                font-size: 24px;
+            }
         }
 
         &-description {
             font: 300 18px / 150% var(--ff-base);
             color: var(--text-grey);
+            @include media('tablet') {
+                font-size: 16px;
+            }
+            @include media('mobile') {
+                font-size: 14px;
+            }
         }
 
         &-list {
@@ -97,6 +162,15 @@
             gap: 8px;
             color: var(--text-grey);
 
+            @include media('tablet') {
+                font-size: 16px;
+            }
+            @include media('mobile') {
+                font-size: 14px;
+                align-items: center;
+                gap: 5px;
+            }
+
             &::before {
                 content: '';
                 width: 24px;
@@ -105,6 +179,11 @@
                 flex-shrink: 0;
                 background: url('../images/icons/ico-check.svg') no-repeat
                     center center / cover;
+
+                @include media('mobile') {
+                    width: 16px;
+                    height: 16px;
+                }
             }
         }
     }

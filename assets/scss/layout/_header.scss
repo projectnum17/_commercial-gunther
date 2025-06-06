@@ -1,7 +1,16 @@
 @use '../base/mixins' as *;
 @use '../base/var' as *;
+@use '../base/media' as *;
+
 .header {
     padding-block: 48px;
+    @include media('tablet') {
+        padding-block: 25px;
+    }
+
+    @include media('mobile') {
+        padding-block: 18px;
+    }
 
     .container {
         display: flex;
@@ -12,6 +21,12 @@
 
     &__logo {
         max-width: 145px;
+        display: flex;
+        flex-shrink: 0;
+
+        @include media('mobile') {
+            max-width: 76px;
+        }
 
         img {
             width: 100%;
@@ -34,6 +49,15 @@
                 color: var(--accent-color);
             }
         }
+
+        @include media('tablet') {
+            justify-content: center;
+            @include flexCenter(20px);
+        }
+
+        @include media('mobile') {
+            display: none;
+        }
     }
 
     &__link {
@@ -46,6 +70,16 @@
         @include hover {
             color: var(--link-text-hover);
             background: var(--link-bg-hover);
+        }
+        @include media('tablet') {
+            width: 100%;
+            max-width: 200px;
+            padding: 14.5px;
+            justify-content: center;
+        }
+
+        @include media('mobile') {
+            display: none;
         }
     }
 }

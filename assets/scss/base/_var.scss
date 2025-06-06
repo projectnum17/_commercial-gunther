@@ -1,9 +1,11 @@
 :root {
-    --ff-base: 'Effra VF Trial', sans-serif;
+    --ff-base: 'Effra Trial', sans-serif;
     --text-color_base: #141933;
     --bgc_base: #f1f1f1;
 
     --accent-color: #f37b70;
+    --primary-color: #89a3ab;
+    --secondary-link-color: #141933;
     --text-grey: #505672;
     --bg-grey: #e5e5e5;
 
@@ -12,4 +14,17 @@
 
     --section-margin: 256px;
     --content-margin: 128px;
+}
+
+@media (max-width: 991px) {
+    :root {
+        --section-margin: 128px;
+        --content-margin: 64px;
+    }
+}
+@media (max-width: 767px) {
+    :root {
+        --section-margin: 64px;
+        --content-margin: 32px;
+    }
 }

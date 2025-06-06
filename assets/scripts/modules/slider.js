@@ -1,6 +1,32 @@
+const gallery = () => {
+    return new Swiper('.gallery__content', {
+        speed: 900,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: true,
+        },
+        grabCursor: true,
+        spaceBetween: 24,
+        slidesPerView: 3,
+        navigation: {
+            prevEl: '.gallery .btn--prev',
+            nextEl: '.gallery .btn--next',
+        },
+        breakpoints: {
+            320: {
+                spaceBetween: 15,
+                slidesPerView: 1.2,
+            },
+            768: {
+                spaceBetween: 18,
+                slidesPerView: 2,
+            },
+            992: {
+                spaceBetween: 24,
+                slidesPerView: 3,
+            },
+        },
+    });
+};
 
-const _slider = () => {
-    console.log('test')
-}
-
-export default _slider
+export default gallery;

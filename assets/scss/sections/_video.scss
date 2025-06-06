@@ -1,0 +1,143 @@
+@use '../base/mixins' as *;
+@use '../base/media' as *;
+
+.video {
+    &__box {
+        position: relative;
+        border-radius: 16px;
+        overflow: hidden;
+        width: 100%;
+        max-height: 689px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: var(--content-margin);
+        @include hover {
+            .btn--pause.show {
+                opacity: 1;
+            }
+        }
+
+        video {
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+        }
+
+        &-play {
+            z-index: 5;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 103px;
+            height: 103px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.2s linear;
+            background: #f5f6fa;
+
+            @include media('tablet') {
+                width: 60px;
+                height: 60px;
+            }
+
+            @include media('mobile') {
+                width: 40px;
+                height: 40px;
+            }
+
+            &.hide {
+                opacity: 0;
+            }
+
+            svg {
+                margin-left: 5px;
+                @include media('tablet') {
+                    width: 30px;
+                    height: 30px;
+                }
+
+                @include media('mobile') {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+
+            &.btn--pause {
+                opacity: 0;
+                svg {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+
+    &__stats {
+        padding-top: 64px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+
+        @include media('mobile') {
+            padding-top: 32px;
+        }
+
+        &-rating {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 4px;
+            @include media('mobile') {
+                flex-direction: row;
+                gap: 10px;
+            }
+        }
+
+        &-val {
+            font: 400 24px / 130% var(--ff-base);
+            font-style: italic;
+        }
+
+        &-stars {
+            display: flex;
+            align-items: center;
+        }
+
+        &-clients {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 8px;
+        }
+
+        &-images {
+            display: flex;
+
+            img {
+                width: 56px;
+                height: 56px;
+                border-radius: 50%;
+                border: 1px solid #f2f2f2;
+                &:first-child {
+                    z-index: -1;
+                    transform: translateX(12px);
+                }
+                &:last-child {
+                    z-index: 3;
+                    transform: translateX(-12px);
+                }
+            }
+        }
+
+        &-info {
+            font: 300 18px / 130% var(--ff-base);
+            text-align: center;
+        }
+    }
+}
