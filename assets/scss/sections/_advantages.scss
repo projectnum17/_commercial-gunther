@@ -79,6 +79,10 @@
             transparent 100%
         );
 
+        &.hide {
+            -webkit-mask-image: none;
+        }
+
         &::-webkit-scrollbar {
             display: none;
         }
@@ -131,12 +135,6 @@
     }
 
     .info-box {
-        &:last-child {
-            padding-bottom: 150px;
-            @include media('mobile') {
-                padding-bottom: 75px;
-            }
-        }
         &__title {
             font: 700 32px / 120% var(--ff-base);
             margin-bottom: 16px;

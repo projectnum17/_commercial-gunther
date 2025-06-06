@@ -1,10 +1,6 @@
 const gallery = () => {
     return new Swiper('.gallery__content', {
         speed: 900,
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: true,
-        },
         grabCursor: true,
         spaceBetween: 24,
         slidesPerView: 3,

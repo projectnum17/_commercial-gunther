@@ -110,6 +110,7 @@
     }
 
     &__slider {
+        position: relative;
         min-height: 859px;
         display: grid;
 
@@ -157,6 +158,7 @@
         }
 
         &-logo {
+            z-index: 20;
             position: absolute;
             top: 56px;
             left: 64px;
@@ -174,6 +176,7 @@
         }
 
         &-content {
+            z-index: 20;
             max-width: 550px;
             position: absolute;
             bottom: 0;
@@ -213,6 +216,7 @@
 
         &-stats {
             position: absolute;
+            z-index: 20;
             top: 0;
             right: 0;
             border-radius: 0 0 0 16px;
@@ -252,6 +256,7 @@
         }
 
         &-rating {
+            z-index: 20;
             position: absolute;
             bottom: 56px;
             right: 64px;
