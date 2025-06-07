@@ -16,6 +16,7 @@
     }
 
     &__item {
+        user-select: none;
         cursor: pointer;
         padding-bottom: 48px;
         border-bottom: 1px solid var(--text-color_base);

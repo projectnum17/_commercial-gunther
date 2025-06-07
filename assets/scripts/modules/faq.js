@@ -13,7 +13,12 @@ const faq = () => {
         }
 
         box.addEventListener('click', () => {
-            box.classList.toggle('open');
+            const isOpen = box.classList.contains('open');
+
+            faqBoxes.forEach((el) => {
+                el.classList.remove('open');
+            });
+            if (!isOpen) box.classList.add('open');
         });
     });
 
