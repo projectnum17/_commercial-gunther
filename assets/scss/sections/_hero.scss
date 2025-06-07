@@ -1,6 +1,221 @@
 @use '../base/media' as *;
 
-.hero {
+.image-comparison {
+    border-radius: 16px;
+    overflow: hidden;
+    display: grid;
+
+    @include media('mobile') {
+        border-radius: 0;
+    }
+
+    &__image-wrapper {
+        height: 100%;
+
+        &--overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: calc(50% + 1px);
+            height: 100%;
+            overflow: hidden;
+        }
+    }
+
+    &__slider-wrapper {
+        position: relative;
+        height: 100%;
+    }
+
+    &__label,
+    &__range {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        appearance: none;
+        outline: none;
+        cursor: grabbing;
+        z-index: 20;
+    }
+
+    &__range {
+        @media (hover) {
+            &:hover ~ .image-comparison__slider .image-comparison__thumb {
+                transform: scale(1.1);
+            }
+        }
+
+        &::-webkit-slider-runnable-track {
+            width: 40px;
+            height: 40px;
+            opacity: 0;
+        }
+
+        &::-moz-range-thumb {
+            width: 40px;
+            height: 40px;
+            opacity: 0;
+        }
+
+        &::-webkit-slider-thumb {
+            width: 40px;
+            height: 40px;
+            opacity: 0;
+        }
+
+        &::-ms-fill-lower {
+            background-color: transparent;
+        }
+
+        &::-ms-track {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            margin: 0;
+            padding: 0;
+            background-color: transparent;
+            color: transparent;
+            outline: none;
+            cursor: col-resize;
+        }
+
+        &::-ms-thumb {
+            width: 0.5%;
+            height: 100%;
+            opacity: 0;
+        }
+
+        &::-ms-tooltip {
+            display: none;
+        }
+    }
+
+    &__figure {
+        margin: 0;
+        height: 100%;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #f2f2f2;
+        }
+
+        &:not(&--overlay) {
+            position: relative;
+            padding-top: 66.6667%;
+        }
+    }
+
+    &__image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 0 50%;
+        overflow: hidden;
+
+        .image-comparison__figure--overlay & {
+            z-index: 1;
+        }
+    }
+
+    &__caption {
+        position: absolute;
+        bottom: 12px;
+        min-width: max-content;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        color: #fff;
+        font-weight: bold;
+        text-transform: uppercase;
+
+        @media screen and (max-width: 40.063em) {
+            font-size: 12px;
+        }
+
+        &--before {
+            left: 12px;
+            z-index: 2;
+        }
+
+        &--after {
+            right: 12px;
+            text-align: right;
+        }
+
+        &-body {
+            max-width: 40vmin;
+            padding: 6px 12px;
+            background-color: rgba(#000, 0.55);
+        }
+    }
+
+    &__slider {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 2px;
+        height: 100%;
+        background-color: #fff;
+        transition: background-color 0.3s ease-in-out;
+        z-index: 10;
+    }
+
+    &__thumb {
+        position: absolute;
+        top: calc(50% - 12px);
+        left: calc(50% - 12px);
+        width: 24px;
+        height: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        border: 1px solid #f5f6fa;
+        border-radius: 50%;
+        transform-origin: center;
+        transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+
+        @include media('mobile') {
+            width: 12px;
+            height: 12px;
+            top: calc(50% - 6px);
+            left: calc(50% - 6px);
+        }
+    }
+
+    .image-comparison__slider-wrapper {
+        .image-comparison__range {
+            &.image-comparison__range--active,
+            &:active,
+            &:focus {
+                ~ .image-comparison__slider .image-comparison__thumb {
+                    transform: scale(0.8);
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+}
+
+.intro {
     .container {
         @include media('mobile') {
             padding-inline: 0px;
@@ -64,51 +279,6 @@
         }
     }
 
-    .beer-slider[data-beer-label]:after,
-    .beer-reveal[data-beer-label]:after {
-        display: none;
-    }
-
-    .beer-handle {
-        &::after {
-            display: none;
-        }
-        &:before {
-            border: none;
-            transform-origin: center;
-            width: 1000px;
-            height: 1px;
-            display: flex;
-            transform: translate(-48.75%, 0) rotate(90deg);
-            position: absolute;
-            top: 0;
-            left: 0;
-            background: #fff;
-
-            @include media('mobile') {
-                transform: translate(-49.2%, 0) rotate(90deg);
-            }
-        }
-
-        width: 24px;
-        height: 24px;
-        background: #fff !important;
-
-        @include media('mobile') {
-            width: 15px;
-            height: 15px;
-        }
-    }
-
-    #heroSlider {
-        border-radius: 16px;
-        display: flex;
-        height: 100%;
-        @include media('mobile') {
-            border-radius: 0;
-        }
-    }
-
     &__slider {
         position: relative;
         min-height: 859px;
@@ -158,6 +328,7 @@
         }
 
         &-logo {
+            pointer-events: none;
             z-index: 20;
             position: absolute;
             top: 56px;
@@ -176,6 +347,7 @@
         }
 
         &-content {
+            pointer-events: none;
             z-index: 20;
             max-width: 550px;
             position: absolute;
@@ -215,6 +387,7 @@
         }
 
         &-stats {
+            pointer-events: none;
             position: absolute;
             z-index: 20;
             top: 0;
@@ -256,6 +429,7 @@
         }
 
         &-rating {
+            pointer-events: none;
             z-index: 20;
             position: absolute;
             bottom: 56px;
@@ -337,7 +511,6 @@
         }
     }
 }
-
 .mobile--visible {
     @include media('mobile') {
         display: block;

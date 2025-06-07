@@ -1,42 +1,46 @@
-// const beforeAfterSlider = () => {
-//     new BeerSlider(document.querySelector('#heroSlider'));
-// };
-
-// export default beforeAfterSlider;
-
 const beforeAfterSlider = () => {
-    const slider = document.querySelector('#heroSlider');
-    if (slider) {
-        const beerSlider = new BeerSlider(slider);
+    const sliders = document.querySelectorAll('[data-component="image-comparison-slider"]');
 
-        const handle = slider.querySelector('.beer-handle');
-        const container = slider;
+    const activateRange = (range) => range.classList.add('image-comparison__range--active');
+    const deactivateRange = (range) => range.classList.remove('image-comparison__range--active');
 
-        let isDragging = false;
+    const moveSliderThumb = (e, range, thumb) => {
+        let position = e.layerY - 20;
+        position = Math.max(-20, Math.min(position, range.offsetHeight - 20));
+        thumb.style.top = `${position}px`;
+    };
 
-        const onTouchStart = (e) => {
-            isDragging = true;
-        };
+    const init = (element) => {
+        const range = element.querySelector('[data-image-comparison-range]');
+        const slider = element.querySelector('[data-image-comparison-slider]');
+        const overlay = element.querySelector('[data-image-comparison-overlay]');
+        const thumb = element.querySelector('[data-image-comparison-thumb]');
 
-        const onTouchMove = (e) => {
-            if (!isDragging) return;
-            const touch = e.touches[0];
-            const rect = container.getBoundingClientRect();
-            const offsetX = touch.clientX - rect.left;
-            const percent = (offsetX / rect.width) * 100;
+        const onMove = (e) => moveSliderThumb(e, range, thumb);
 
-            beerSlider.reveal.style.width = `${percent}%`;
-            beerSlider.handle.style.left = `${percent}%`;
-        };
+        range.addEventListener('input', (e) => {
+            const value = e.target.value;
+            slider.style.left = `${value}%`;
+            overlay.style.width = `${value}%`;
+            activateRange(range);
+            element.addEventListener('mousemove', onMove);
+        });
 
-        const onTouchEnd = () => {
-            isDragging = false;
-        };
+        range.addEventListener('change', () => {
+            deactivateRange(range);
+            element.removeEventListener('mousemove', onMove);
+        });
 
-        handle.addEventListener('touchstart', onTouchStart, { passive: true });
-        container.addEventListener('touchmove', onTouchMove, { passive: true });
-        window.addEventListener('touchend', onTouchEnd);
-    }
+        if (!('ontouchstart' in window)) {
+            range.addEventListener('mouseup', () => deactivateRange(range));
+            range.addEventListener('mousedown', () => element.addEventListener('mousemove', onMove));
+        }
+
+        range.addEventListener('touchstart', () => activateRange(range), { passive: true });
+        range.addEventListener('touchend', () => deactivateRange(range), { passive: true });
+    };
+
+    sliders.forEach(init);
 };
 
 export default beforeAfterSlider;

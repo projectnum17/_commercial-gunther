@@ -64,9 +64,9 @@
             </div>
         </header>
         <main class="main">
-            <section class="hero">
+            <section class="intro">
                 <div class="container">
-                    <div class="hero__content mobile--visible">
+                    <div class="intro__content mobile--visible">
                         <p>Für Hotellerie & Gastronomie</p>
                         <h1>Glückliche Gäste. Erfolgreicher Gastgeber.</h1>
                         <p>
@@ -75,34 +75,65 @@
                             DACH-Raum.
                         </p>
                     </div>
-                    <div class="hero__slider">
+                    <div class="intro__slider">
                         <div
-                            id="heroSlider"
-                            class="hero__slider-before beer-slider"
-                            data-beer-label="before"
+                            class="image-comparison"
+                            data-component="image-comparison-slider"
                         >
-                            <div class="hero__slider-wrapper wrapper--right">
-                                <img
-                                    class="slider-thumb"
-                                    src="./assets/images/hero-after.jpg"
-                                    alt="Photo"
+                            <div class="image-comparison__slider-wrapper">
+                                <input
+                                    type="range"
+                                    min="0"
+                                    max="100"
+                                    value="50"
+                                    class="image-comparison__range"
+                                    id="image-compare-range"
+                                    data-image-comparison-range=""
                                 />
-                            </div>
-                            <div
-                                class="hero__slider-after beer-reveal"
-                                data-beer-label="after"
-                            >
-                                <div class="hero__slider-wrapper wrapper--left">
-                                    <img
-                                        class="slider-thumb"
-                                        src="./assets/images/hero-before.jpg"
-                                        alt="Photo"
-                                    />
+
+                                <div
+                                    class="image-comparison__image-wrapper image-comparison__image-wrapper--overlay"
+                                    data-image-comparison-overlay=""
+                                >
+                                    <div
+                                        class="image-comparison__figure image-comparison__figure--overlay"
+                                    >
+                                        <div class="image-comparison__picture">
+                                            <img
+                                                src="./assets/images/hero-before.jpg"
+                                                alt="Photo"
+                                                class="image-comparison__image"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="image-comparison__slider"
+                                    data-image-comparison-slider=""
+                                >
+                                    <span
+                                        class="image-comparison__thumb"
+                                        data-image-comparison-thumb=""
+                                    >
+                                    </span>
+                                </div>
+
+                                <div class="image-comparison__image-wrapper">
+                                    <div class="image-comparison__figure">
+                                        <div class="image-comparison__picture">
+                                            <img
+                                                src="./assets/images/hero-after.jpg"
+                                                alt="Photo"
+                                                class="image-comparison__image"
+                                            />
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="hero__slider-stats">
+                        <div class="intro__slider-stats">
                             <div class="stats-box">
                                 <span
                                     class="stats-box__val"
@@ -136,8 +167,8 @@
                                 </span>
                             </div>
                         </div>
-                        <div class="hero__slider-rating">
-                            <div class="hero__slider-stars">
+                        <div class="intro__slider-rating">
+                            <div class="intro__slider-stars">
                                 <span>4.9</span>
                                 <span>
                                     <img
@@ -172,7 +203,7 @@
                                     />
                                 </span>
                             </div>
-                            <div class="hero__slider-clients">
+                            <div class="intro__slider-clients">
                                 <span>
                                     <img
                                         width="56"
@@ -197,7 +228,7 @@
                             </div>
                         </div>
 
-                        <div class="hero__slider-logo">
+                        <div class="intro__slider-logo">
                             <img
                                 width="96"
                                 height="96"
@@ -205,31 +236,33 @@
                                 alt="Logo"
                             />
                         </div>
-                        <div class="hero__slider-content">
-                            <p class="hero__slider-subtitle">Vivamus pretium</p>
-                            <h2 class="hero__slider-title">
+                        <div class="intro__slider-content">
+                            <p class="intro__slider-subtitle">
+                                Vivamus pretium
+                            </p>
+                            <h2 class="intro__slider-title">
                                 vestibulum varius turpis
                             </h2>
-                            <p class="hero__slider-descr">
+                            <p class="intro__slider-descr">
                                 Fusce lacinia ante eu scelerisque dapibus. Nunc
                                 quis sem consequat, viverra odio ut, porta nisl.
                                 Vivamus at consequat sem.
                             </p>
                         </div>
                     </div>
-                    <div class="hero__num mobile--visible">
-                        <div class="hero__num-cards">
-                            <div class="hero__num-item">
+                    <div class="intro__num mobile--visible">
+                        <div class="intro__num-cards">
+                            <div class="intro__num-item">
                                 <span data-count="20" data-suffix="+">20+</span>
                                 <p>Jahre Hotellerie & Gastronomie</p>
                             </div>
-                            <div class="hero__num-item">
+                            <div class="intro__num-item">
                                 <span data-count="170" data-suffix="%"
                                     >170%</span
                                 >
                                 <p>Umsatzwachstum</p>
                             </div>
-                            <div class="hero__num-item">
+                            <div class="intro__num-item">
                                 <span data-count="1000">1000</span>
                                 <p>Mitarbeiter geführt</p>
                             </div>
@@ -1343,38 +1376,6 @@
                                     </p>
                                 </div>
                             </div>
-                            <script>
-                                const scrollContainer =
-                                    document.querySelector('.advantages__info');
-
-                                if (scrollContainer) {
-                                    scrollContainer.addEventListener(
-                                        'scroll',
-                                        () => {
-                                            const scrollTop =
-                                                scrollContainer.scrollTop;
-                                            const scrollHeight =
-                                                scrollContainer.scrollHeight;
-                                            const clientHeight =
-                                                scrollContainer.clientHeight;
-
-                                            // Проверяем: если проскроллили до конца
-                                            if (
-                                                scrollTop + clientHeight >=
-                                                scrollHeight
-                                            ) {
-                                                scrollContainer.classList.add(
-                                                    'hide'
-                                                );
-                                            } else {
-                                                scrollContainer.classList.remove(
-                                                    'hide'
-                                                ); // по желанию
-                                            }
-                                        }
-                                    );
-                                }
-                            </script>
                         </div>
                         <div class="advantages__images">
                             <img

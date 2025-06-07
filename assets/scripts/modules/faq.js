@@ -3,9 +3,9 @@ const faq = () => {
     const showMoreButton = document.querySelector('.js-more');
     const visibleCount = 5;
 
-    if (faqBoxes.length > 0) {
-        faqBoxes[0].classList.add('open');
-    }
+    if (!faqBoxes.length) return;
+
+    faqBoxes[0].classList.add('open');
 
     faqBoxes.forEach((box, index) => {
         if (index >= visibleCount) {
@@ -17,7 +17,9 @@ const faq = () => {
         });
     });
 
-    if (showMoreButton) {
+    if (showMoreButton && faqBoxes.length > visibleCount) {
+        showMoreButton.style.display = '';
+
         showMoreButton.addEventListener('click', () => {
             faqBoxes.forEach((box, index) => {
                 if (index >= visibleCount) {
@@ -27,6 +29,8 @@ const faq = () => {
 
             showMoreButton.style.display = 'none';
         });
+    } else if (showMoreButton) {
+        showMoreButton.style.display = 'none';
     }
 };
 
