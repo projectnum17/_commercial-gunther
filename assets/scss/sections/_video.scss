@@ -18,6 +18,10 @@
             }
         }
 
+        @include media('mobile') {
+            height: auto;
+        }
+
         video {
             cursor: pointer;
             width: 100%;
