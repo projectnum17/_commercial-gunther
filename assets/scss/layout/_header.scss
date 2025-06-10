@@ -10,6 +10,17 @@
 
     @include media('mobile') {
         padding-block: 18px;
+        position: fixed;
+        z-index: 50;
+        width: 100%;
+        transition-property: padding, box-shadow, background-color;
+        transition-duration: 0.35s;
+
+        &.scroll {
+            padding-block: 12px;
+            box-shadow: 0 0 8rem #185a684a;
+            background-color: #fff;
+        }
     }
 
     .container {
@@ -17,6 +28,15 @@
         align-items: center;
         justify-content: space-between;
         gap: 20px;
+    }
+
+    &__burger {
+        display: none;
+        width: 36px;
+        height: 36px;
+        @include media('mobile') {
+            display: flex;
+        }
     }
 
     &__logo {

@@ -23,6 +23,56 @@
     </head>
 
     <body>
+        <div class="mobile-menu">
+            <div class="mobile-menu__items">
+                <div class="mobile-menu__head">
+                    <div class="mobile-menu__logo">
+                        <img
+                            width="76"
+                            height="33"
+                            src="./assets/images/icons/logo.svg"
+                            alt="Logo"
+                        />
+                    </div>
+                    <button class="mobile-menu__close js-menu-close">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            fill="currentColor"
+                            class="w-8 h-8"
+                            viewBox="0 0 16 16"
+                        >
+                            <path
+                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"
+                            ></path>
+                        </svg>
+                    </button>
+                </div>
+                <nav class="mobile-menu__nav">
+                    <ul class="mobile-menu__list">
+                        <li class="mobile-menu__item">
+                            <a class="js-menu-link" href="#section_1"
+                                >Über uns</a
+                            >
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a class="js-menu-link" href="#section_2"
+                                >Referenzen</a
+                            >
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a class="js-menu-link" href="#section_3"
+                                >Angebot</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+                <a href="#section_3" class="mobile-menu__link js-menu-link">
+                    Subscribe Now
+                </a>
+            </div>
+        </div>
         <header class="header">
             <div class="container">
                 <a href="/" class="header__logo">
@@ -61,6 +111,22 @@
                 <a href="javascript:void(0)" class="header__link"
                     >Subscribe Now</a
                 >
+                <button class="header__burger js-menu-open">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-8 h-8"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                        ></path>
+                    </svg>
+                </button>
             </div>
         </header>
         <main class="main">
@@ -270,7 +336,7 @@
                     </div>
                 </div>
             </section>
-            <section class="benefits">
+            <section class="benefits" id="section_1">
                 <div class="container">
                     <div class="section-header">
                         <p class="section-header__subtitle">
@@ -405,7 +471,7 @@
                     >
                 </div>
             </section>
-            <section class="previews">
+            <section class="previews" id="section_2">
                 <div class="container">
                     <div class="section-header">
                         <p class="section-header__subtitle">
@@ -509,7 +575,7 @@
                     >
                 </div>
             </section>
-            <section class="about">
+            <section class="about" id="section_3">
                 <div class="container">
                     <div class="about__content">
                         <div class="about__content-thumb">
@@ -1428,7 +1494,7 @@
                                 />
                             </svg>
                         </button>
-                        <video playsinline controls>
+                        <video playsinline controls poster="./assets/images/hero-after.jpg">
                             <source
                                 src="./assets/video/video.mp4"
                                 type="video/mp4"

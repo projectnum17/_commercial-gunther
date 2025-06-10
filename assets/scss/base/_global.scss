@@ -42,3 +42,15 @@ section {
         padding-inline: 11px;
     }
 }
+
+main {
+    @include media('mobile') {
+        padding-top: 90px;
+    }
+}
+
+section {
+    @include media('mobile') {
+        scroll-margin-top: 80px;
+    }
+}
