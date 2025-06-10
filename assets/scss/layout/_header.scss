@@ -34,9 +34,15 @@
         display: none;
         width: 36px;
         height: 36px;
-        color: inherit;
+        color: inherit !important;
+        background: transparent;
         @include media('mobile') {
             display: flex;
+        }
+
+        svg {
+            stroke: #141933 !important;
+            fill: #141933 !important;
         }
     }
 
