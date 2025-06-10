@@ -20,13 +20,21 @@
             border: 1px solid #f5f6fa;
             background: #d4d4d41a;
 
-            @include media('desktop') {
-                display: none;
+            @include media('tablet') {
+                padding: 8px;
+                border-radius: 12px;
             }
 
             p {
                 font: 300 18px / 150% var(--ff-base);
                 color: #f5f6fa;
+
+                @include media('tablet') {
+                    font-size: 16px;
+                }
+                @include media('mobile') {
+                    font-size: 14px;
+                }
             }
         }
 
@@ -115,6 +123,10 @@
                 top: 250px;
                 right: 122px;
                 max-width: 253px;
+                @include media('mobile') {
+                    top: 42%;
+                    right: 10px;
+                }
 
                 &::before {
                     content: '';
@@ -127,12 +139,19 @@
                     top: 50%;
                     transform: translate(100%, -50%);
                     z-index: -1;
+                    @include media('mobile') {
+                        display: none;
+                    }
                 }
             }
             &.footnote--s {
                 top: 450px;
                 left: 62px;
                 max-width: 299px;
+
+                @include media('mobile') {
+                    top: 30%;
+                }
 
                 &::before {
                     content: '';
@@ -145,6 +164,9 @@
                     top: 7px;
                     transform: translate(-100%, -100%) rotate(180deg);
                     z-index: -1;
+                    @include media('mobile') {
+                        display: none;
+                    }
                 }
             }
             &.footnote--t {
@@ -152,23 +174,13 @@
                 right: 52px;
                 max-width: 229px;
 
-                &::before {
-                    content: '';
-                    background: url('../images/icons/ico-pin.svg') no-repeat
-                        center center;
-                    width: 45px;
-                    height: 45px;
-                    position: absolute;
-                    right: 40px;
-                    bottom: 5px;
-                    transform: translate(100%, 100%);
-                    z-index: -1;
+                @include media('desktop') {
+                    bottom: 25%;
                 }
-            }
-            &.footnote--for {
-                bottom: 80px;
-                left: 40px;
-                max-width: 267px;
+
+                @include media('mobile') {
+                    bottom: 10%;
+                }
 
                 &::before {
                     content: '';
@@ -181,17 +193,48 @@
                     bottom: 5px;
                     transform: translate(100%, 100%);
                     z-index: -1;
+                    @include media('mobile') {
+                        display: none;
+                    }
+                }
+            }
+            &.footnote--for {
+                bottom: 80px;
+                left: 40px;
+                max-width: 267px;
+                @include media('mobile') {
+                    bottom: 26%;
+                }
+
+                &::before {
+                    content: '';
+                    background: url('../images/icons/ico-pin.svg') no-repeat
+                        center center;
+                    width: 45px;
+                    height: 45px;
+                    position: absolute;
+                    right: 40px;
+                    bottom: 5px;
+                    transform: translate(100%, 100%);
+                    z-index: -1;
+                    @include media('mobile') {
+                        display: none;
+                    }
                 }
             }
         }
     }
 
-     .col--right {
+    .col--right {
         .previews__content-footnote {
             &.footnote--f {
                 top: 250px;
                 right: 122px;
                 max-width: 253px;
+                @include media('mobile') {
+                    right: 12px;
+                    top: 33%;
+                }
 
                 &::before {
                     content: '';
@@ -204,12 +247,23 @@
                     top: 50%;
                     transform: translate(100%, -50%);
                     z-index: -1;
+                    @include media('mobile') {
+                        display: none;
+                    }
                 }
             }
             &.footnote--s {
                 top: 450px;
                 left: 62px;
                 max-width: 299px;
+                @include media('desktop') {
+                    top: 45%;
+                }
+
+                @include media('mobile') {
+                    top: 49%;
+                    left: 12px;
+                }
 
                 &::before {
                     content: '';
@@ -222,12 +276,23 @@
                     top: 7px;
                     transform: translate(-100%, -100%) rotate(180deg);
                     z-index: -1;
+                    @include media('mobile') {
+                        display: none;
+                    }
                 }
             }
             &.footnote--t {
                 bottom: 150px;
                 right: 52px;
                 max-width: 229px;
+                @include media('desktop') {
+                    bottom: 27%;
+                }
+
+                @include media('mobile') {
+                    bottom: 22%;
+                    right: 12px;
+                }
 
                 &::before {
                     content: '';
@@ -240,12 +305,19 @@
                     bottom: 5px;
                     transform: translate(100%, 100%);
                     z-index: -1;
+                    @include media('mobile') {
+                        display: none;
+                    }
                 }
             }
             &.footnote--for {
                 bottom: 80px;
                 left: 40px;
                 max-width: 267px;
+                @include media('mobile') {
+                    left: 12px;
+                    bottom: 5%;
+                }
 
                 &::before {
                     content: '';
@@ -258,6 +330,9 @@
                     bottom: 5px;
                     transform: translate(100%, 100%);
                     z-index: -1;
+                    @include media('mobile') {
+                        display: none;
+                    }
                 }
             }
         }
